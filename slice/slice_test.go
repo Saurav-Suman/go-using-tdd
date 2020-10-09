@@ -26,3 +26,11 @@ func TestSumAllSlice(t *testing.T) {
 		t.Errorf("got %v want %v", sum, want)
 	}
 }
+
+func TestSumTail(t *testing.T) {
+	sum := sumTail([]int{2, 3, 4}, []int{5, 6, 7})
+	want := []int{7, 13}
+	if !reflect.DeepEqual(sum, want) {
+		t.Errorf("got %v want %v", sum, want)
+	}
+}

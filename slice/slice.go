@@ -25,3 +25,14 @@ func sumAllSlice(slicedata ...[]int) []int {
 	return result
 
 }
+
+func sumTail(slices ...[]int) []int {
+	var result []int
+
+	for _, v := range slices {
+		fmt.Println(v)
+		result = append(result, slice(v[1:])) // [2,3,5] => [3,5] // :1 -> [2,3,5]=>[2]
+	}
+	return result
+
+}
